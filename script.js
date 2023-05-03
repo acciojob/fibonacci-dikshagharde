@@ -1,21 +1,16 @@
 function fibonacci(num) {
-  if (num === 0) {
-    return 0;
-  } else if (num === 1 || num === 2) {
-    return 1;
-  } else if (num < 0 || num > 50) {
-    return "Invalid input";
-  } else {
-    let prev1 = 1;
-    let prev2 = 1;
-    let curr = 0;
-    for (let i = 3; i <= num; i++) {
-      curr = prev1 + prev2;
-      prev2 = prev1;
-      prev1 = curr;
-    }
-    return curr;
-  }
+// your code here
+	let a=0,b=1,c=0,i=3;
+while(i<=num){  
+	
+	c=a+b;  
+	a=b;
+     b=c;
+	i++;
 }
-
+	return c;  
+}
+let n=prompt("Enter n terms");
+let last=fibonacci(n);
+alert(last);
 module.exports = fibonacci;
